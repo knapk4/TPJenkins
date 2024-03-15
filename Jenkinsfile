@@ -13,9 +13,8 @@ node{
 
     stage('Test image') {
         sh "docker run -d --name test-${env.BUILD_ID} -p 8081:80 ${IMAGE}"
-
-         }
     }
+  
 
     stage('Push image') {
         // Authentification auprès du registre Docker, si nécessaire
