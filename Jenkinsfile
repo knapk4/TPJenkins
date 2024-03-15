@@ -12,8 +12,7 @@ node{
     }
 
     stage('Test image') {
-    docker.image("${IMAGE}").withRun("--name test-${BUILD_ID} -p 8081:80") { c ->
-        sh 'docker ps -a'
+        sh "docker run -d --name test-${env.BUILD_ID} -p 8081:80 ${IMAGE}"
 
          }
     }
