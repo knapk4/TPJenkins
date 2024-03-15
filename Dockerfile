@@ -1,11 +1,3 @@
-FROM node:14
-
-WORKDIR /app
-
-RUN npm install
-
-COPY ..
-
-EXPOSE 3000
-
-CMD ["node",
+FROM nginx:latest
+RUN echo "TEST MACHINE" > /usr/share/nginx/html/index.html
+EXPOSE 80
