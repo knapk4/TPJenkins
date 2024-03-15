@@ -1,7 +1,7 @@
 node{
   def app
-  def registryProjet='192.168.245.155:5000'
-  def IMAGE="${registryProjet}/monapp:version-${env.BUILD_ID}"
+  def registryProjet='anthonyk46/jenkins'
+  def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
 
     stage('Clone') {
         checkout scm
